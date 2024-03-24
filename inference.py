@@ -1,11 +1,12 @@
 import cv2
 import numpy as np
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 
 import logging
 log = logging.getLogger(__name__)
 
-import model
+# import model
+import model as model_tx
 import time
 
 import os
@@ -14,6 +15,7 @@ import random
 class Detector(object):
     def __init__(self,model_dir):
         os.environ['CUDA_VISIBLE_DEVICES'] = '1'
+        tf.compat.v1.disable_eager_execution()
         config = tf.ConfigProto(allow_soft_placement=True)
         config.gpu_options.per_process_gpu_memory_fraction = 1.0
         config.gpu_options.allow_growth = True

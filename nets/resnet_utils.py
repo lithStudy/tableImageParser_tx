@@ -1,8 +1,9 @@
 
 import collections
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+import tf_slim as slim
 
-slim = tf.contrib.slim
+# slim = tf.contrib.slim
 
 
 class Block(collections.namedtuple('Block', ['scope', 'unit_fn', 'args'])):

@@ -1,2 +1,2 @@
-model_checkpoint_path: "./model.ckpt-11111"
-all_model_checkpoint_paths: "./model.ckpt-11111"
+model_checkpoint_path: "/model_tx/model.ckpt-39493"
+all_model_checkpoint_paths: "/model_tx/model.ckpt-39493"

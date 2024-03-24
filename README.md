@@ -38,7 +38,7 @@
 
 ## 我的试用补充
 模型地址：
-链接：https://pan.baidu.com/s/1n6t2TSoZ1cIJhYXjd_R9dg?pwd=zogb 
+链接：https://pan.baidu.com/s/1n6t2TSoZ1cIJhYXjd_R9dg?pwd=zogb
 
 数据集作者目前已经不开放了
 
@@ -48,3 +48,90 @@
 
 
 
+| Name                      | Version    | Build              | Channel       |
+|---------------------------|------------|--------------------|---------------|
+| absl-py                   | 2.1.0      | pypi_0             | pypi          |
+| asttokens                 | 2.4.1      | pypi_0             | pypi          |
+| astunparse                | 1.6.3      | pypi_0             | pypi          |
+| backcall                  | 0.2.0      | pypi_0             | pypi          |
+| ca-certificates           | 2024.3.11  | haa95532_0         |               |
+| cachetools                | 5.3.3      | pypi_0             | pypi          |
+| certifi                   | 2024.2.2   | pypi_0             | pypi          |
+| charset-normalizer        | 3.3.2      | pypi_0             | pypi          |
+| colorama                  | 0.4.6      | pypi_0             | pypi          |
+| contourpy                 | 1.1.1      | pypi_0             | pypi          |
+| cycler                    | 0.12.1     | pypi_0             | pypi          |
+| decorator                 | 5.1.1      | pypi_0             | pypi          |
+| executing                 | 2.0.1      | pypi_0             | pypi          |
+| flask                     | 0.10.1     | pypi_0             | pypi          |
+| flatbuffers               | 24.3.7     | pypi_0             | pypi          |
+| fonttools                 | 4.50.0     | pypi_0             | pypi          |
+| gast                      | 0.4.0      | pypi_0             | pypi          |
+| google-auth               | 2.29.0     | pypi_0             | pypi          |
+| google-auth-oauthlib      | 0.4.6      | pypi_0             | pypi          |
+| google-pasta              | 0.2.0      | pypi_0             | pypi          |
+| grpcio                    | 1.62.1     | pypi_0             | pypi          |
+| h5py                      | 3.10.0     | pypi_0             | pypi          |
+| idna                      | 3.6        | pypi_0             | pypi          |
+| importlib-metadata        | 7.1.0      | pypi_0             | pypi          |
+| importlib-resources       | 6.4.0      | pypi_0             | pypi          |
+| ipython                   | 8.12.3     | pypi_0             | pypi          |
+| itsdangerous              | 2.1.2      | pypi_0             | pypi          |
+| jedi                      | 0.19.1     | pypi_0             | pypi          |
+| jinja2                    | 3.1.3      | pypi_0             | pypi          |
+| keras                     | 2.10.0     | pypi_0             | pypi          |
+| keras-preprocessing       | 1.1.2      | pypi_0             | pypi          |
+| kiwisolver                | 1.4.5      | pypi_0             | pypi          |
+| libclang                  | 18.1.1     | pypi_0             | pypi          |
+| markdown                  | 3.6        | pypi_0             | pypi          |
+| markupsafe                | 2.1.5      | pypi_0             | pypi          |
+| matplotlib                | 3.7.5      | pypi_0             | pypi          |
+| matplotlib-inline         | 0.1.6      | pypi_0             | pypi          |
+| numpy                     | 1.24.3     | pypi_0             | pypi          |
+| oauthlib                  | 3.2.2      | pypi_0             | pypi          |
+| opencv-python             | 4.9.0.80   | pypi_0             | pypi          |
+| openssl                   | 1.1.1w     | h2bbff1b_0         |               |
+| opt-einsum                | 3.3.0      | pypi_0             | pypi          |
+| packaging                 | 24.0       | pypi_0             | pypi          |
+| parso                     | 0.8.3      | pypi_0             | pypi          |
+| pickleshare               | 0.7.5      | pypi_0             | pypi          |
+| pillow                    | 10.2.0     | pypi_0             | pypi          |
+| pip                       | 23.3.1     | py38haa95532_0    |               |
+| plumbum                   | 1.8.2      | pypi_0             | pypi          |
+| prompt-toolkit            | 3.0.43     | pypi_0             | pypi          |
+| protobuf                  | 3.19.6     | pypi_0             | pypi          |
+| pure-eval                 | 0.2.2      | pypi_0             | pypi          |
+| pyasn1                    | 0.5.1      | pypi_0             | pypi          |
+| pyasn1-modules            | 0.3.0      | pypi_0             | pypi          |
+| pygments                  | 2.17.2     | pypi_0             | pypi          |
+| pyparsing                 | 3.1.2      | pypi_0             | pypi          |
+| python                    | 3.8.0      | hff0d562_2        |               |
+| python-dateutil           | 2.9.0.post0 | pypi_0            | pypi          |
+| pywin32                   | 306        | pypi_0             | pypi          |
+| requests                  | 2.31.0     | pypi_0             | pypi          |
+| requests-oauthlib         | 1.4.0      | pypi_0             | pypi          |
+| rsa                       | 4.9        | pypi_0             | pypi          |
+| setuptools                | 68.2.2     | py38haa95532_0    |               |
+| shapely                   | 2.0.3      | pypi_0             | pypi          |
+| six                       | 1.16.0     | pypi_0             | pypi          |
+| sqlite                    | 3.41.2     | h2bbff1b_0        |               |
+| stack-data                | 0.6.3      | pypi_0             | pypi          |
+| tensorboard               | 2.10.1     | pypi_0             | pypi          |
+| tensorboard-data-server   | 0.6.1      | pypi_0             | pypi          |
+| tensorboard-plugin-wit    | 1.8.1      | pypi_0             | pypi          |
+| tensorflow                | 2.10.0     | pypi_0             | pypi          |
+| tensorflow-estimator      | 2.10.0     | pypi_0             | pypi          |
+| tensorflow-intel          | 2.13.0     | pypi_0             | pypi          |
+| tensorflow-io-gcs-filesystem | 0.31.0  | pypi_0             | pypi          |
+| termcolor                 | 2.4.0      | pypi_0             | pypi          |
+| tf-slim                   | 1.1.0      | pypi_0             | pypi          |
+| traitlets                 | 5.14.2     | pypi_0             | pypi          |
+| typing-extensions         | 4.5.0      | pypi_0             | pypi          |
+| urllib3                   | 2.2.1      | pypi_0             | pypi          |
+| vc                        | 14.2       | h21ff451_1        |               |
+| vs2015_runtime            | 14.27.29016 | h5e58377_2       |               |
+| wcwidth                   | 0.2.13     | pypi_0             | pypi          |
+| werkzeug                  | 3.0.1      | pypi_0             | pypi          |
+| wheel                     | 0.41.2     | py38haa95532_0    |               |
+| wrapt                     | 1.16.0     | pypi_0             | pypi          |
+| zipp                      | 3.18.1     | pypi_0             | pypi          |

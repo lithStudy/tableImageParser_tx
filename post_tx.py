@@ -4,7 +4,7 @@ import numpy as np
 import os
 import math
 
-def line_row_gen(img_path):
+def line_row_gen(img_path,out_path):
 
     img = cv2.imread( img_path )
     img_temp = np.ones_like(img) *255
@@ -28,10 +28,10 @@ def line_row_gen(img_path):
         return img_temp, 0
     # points = [(box[0], box[1]), (box[2],box[1]), (box[2], box[3]), (box[0], box[3])]
     # cv2.fillPoly(image,[np.array(points)],(255,0,0))
-    # cv2.imwrite( 'E:/image/myhoughlinesp.jpg',img )
-    cv2.imshow( '1',img )
-    cv2.waitKey(0)
-    return img_temp, 1
+    cv2.imwrite( out_path,img )
+    # cv2.imshow( '1',img )
+    # cv2.waitKey(0)
+    return img, 1
 
 def angle(v1, v2):
   dx1 = v1[2] - v1[0]
@@ -50,7 +50,7 @@ def angle(v1, v2):
       included_angle = 360 - included_angle
   return included_angle
 
-def line_col_gen(img_path):
+def line_col_gen(img_path,out_path):
     AB = [0,0,100,0]
 
     img = cv2.imread( img_path )
@@ -77,25 +77,64 @@ def line_col_gen(img_path):
     except:
         return img_temp, 0
     # points = [(box[0], box[1]), (box[2],box[1]), (box[2], box[3]), (box[0], box[3])]
-    # cv2.fillPoly(image,[np.array(points)],(255,0,0))
-    # cv2.imwrite( 'E:/image/myhoughlinesp.jpg',img )
-    cv2.imshow( '2',img )
-    cv2.waitKey(0)
-    return img_temp, 1
+    # cv2.fillPoly(img,[np.array(points)],(255,0,0))
+    cv2.imwrite( out_path,img )
+    # cv2.imshow( '2',img )
+    # cv2.waitKey(0)
+    return img, 1
 
 def tx_post(row_path, nrow_path, col_path, ncol_path):
-    row_image, is_row_exist = line_row_gen(row_path)
-    nrow_image, is_nrow_exist = line_row_gen(nrow_path)
-    col_image, is_col_exist = line_col_gen(col_path)
-    ncol_image, is_ncol_exist = line_col_gen(ncol_path)
+    row_image, is_row_exist = line_row_gen(row_path,'./out/1.jpg')
+    nrow_image, is_nrow_exist = line_row_gen(nrow_path,'./out/2.jpg')
+    col_image, is_col_exist = line_col_gen(col_path,'./out/3.jpg')
+    ncol_image, is_ncol_exist = line_col_gen(ncol_path,'./out/4.jpg')
 
+    saveImg(row_image,'./out_new/1.jpg')
+    saveImg(nrow_image,'./out_new/2.jpg')
+    saveImg(col_image,'./out_new/3.jpg')
+    saveImg(ncol_image,'./out_new/4.jpg')
+
+    # # 显示叠加后的图像
+    # # 缩小图像
+    # scale_percent = 20  # 缩小的百分比
+    # width = int(nrow_image.shape[1] * scale_percent / 100)
+    # height = int(nrow_image.shape[0] * scale_percent / 100)
+    # dim = (width, height)
+    # resized_image = cv2.resize(nrow_image, dim, interpolation=cv2.INTER_AREA)
+    #
+    # cv2.imshow('Added Image', resized_image)
+    # cv2.waitKey(0)
+    # cv2.destroyAllWindows()
+
+
+
+def saveImg(newImg,path):
+    org_img= cv2.imread('./image/111.jpg')
+    # 确保两张图像具有相同的尺寸
+    img2 = cv2.resize(newImg, (org_img.shape[1], org_img.shape[0]))
+
+    # 将第二张图叠加到第一张图的左上角
+    added_image = cv2.addWeighted(org_img, 0.8, img2, 0.2, 0)
+
+    # 显示叠加后的图像
+    # 缩小图像
+    scale_percent = 100  # 缩小的百分比
+    width = int(added_image.shape[1] * scale_percent / 100)
+    height = int(added_image.shape[0] * scale_percent / 100)
+    dim = (width, height)
+    resized_image = cv2.resize(added_image, dim, interpolation=cv2.INTER_AREA)
+
+    # cv2.imshow('Added Image', resized_image)
+    # cv2.waitKey(0)
+    # cv2.destroyAllWindows()
+    cv2.imwrite( path,resized_image )
 
 if __name__ == '__main__':
-    img_root = r'\result\test'
-    col_root = r'\result\col'
-    row_root = r'\result\row'
-    ncol_root = r'\result\ncol'
-    nrow_root = r'\result\nrow'
+    img_root = './image'
+    col_root = './tx_infer_data/col'
+    row_root = './tx_infer_data/row'
+    ncol_root = './tx_infer_data/ncol'
+    nrow_root = './tx_infer_data/nrow'
 
 
     img_names = os.listdir(col_root)
